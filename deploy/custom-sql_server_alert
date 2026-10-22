@@ -1,0 +1,5 @@
+#!/opt/wazuh-integrations/venv/bin/python3
+from wazuh_sql_alert.runner import main
+
+if __name__ == "__main__":
+    raise SystemExit(main())

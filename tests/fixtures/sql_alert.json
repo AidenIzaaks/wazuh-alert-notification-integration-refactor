@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-20T10:15:32.886+0200",
+  "rule": {
+    "level": 6,
+    "description": "MSSQL (UPDATE): Data updated on Client in Metro_Nam by (no user).",
+    "id": "100008",
+    "firedtimes": 114,
+    "mail": false,
+    "groups": ["mssql_audit_events", "database_integrity"],
+    "pci_dss": ["10.2.2", "10.2.3"],
+    "nist_800_53": ["au_6database_modification"]
+  },
+  "agent": { "id": "040", "name": "Sage", "ip": "192.168.0.11" },
+  "manager": { "name": "Document-Storage" },
+  "id": "1792484132.88712473",
+  "full_log": "2026 Oct 20 10:15:31 WinEvtLog: Application: AUDIT_SUCCESS(33205): MSSQLSERVER: (no user): no domain: ARNAM158.metro.com.na: Audit event: audit_schema_version:1 event_time:2026-10-20 08:15:30.9049775 sequence_number:1 action_id:UP   succeeded:true is_column_permission:true session_id:108 server_principal_id:265 database_principal_id:1 target_server_principal_id:0 target_database_principal_id:0 object_id:91863394 user_defined_event_id:0 transaction_id:170080395 class_type:U  duration_milliseconds:0 response_rows:0 affected_rows:0 client_ip:local machine permission_bitmask:00000000000000000000000000000002 sequence_group_id:6C6D22C2-42F4-4232-A1D5-9E80B14844F9 session_server_principal_name:METRO\\ARNAM158$ server_principal_name:METRO\\ARNAM158$ server_principal_sid:010100000000000512000000 database_principal_name:dbo target_server_principal_name: target_server_principal_sid: target_database_principal_name: server_instance_name:ARNAM158 database_name:Metro_Nam schema_name:dbo object_name:Client statement:update Metro_Nam.dbo.client  set ufAROTB = AFIDI.OpenToBuy from AFI_DebtorIntegration.dbo.DI_ArchDebtors as AFIDI  where Account = AFIDI.AccountNumber COLLATE SQL_Latin1_General_CP1_CI_AS additional_information: user_defined_information: application_name:SQLCMD .  ",
+  "predecoder": {
+    "program_name": "WinEvtLog",
+    "timestamp": "2026 Oct 20 10:15:31"
+  },
+  "decoder": { "parent": "windows", "name": "windows" },
+  "data": {
+    "action": "UP",
+    "dstuser": "(no user)",
+    "id": "33205",
+    "status": "AUDIT_SUCCESS",
+    "extra_data": "MSSQLSERVER",
+    "system_name": "ARNAM158.metro.com.na",
+    "type": "Application",
+    "db": {
+      "database_name": "Metro_Nam",
+      "schema_name": "dbo",
+      "object_name": "Client",
+      "statement": "update Metro_Nam.dbo.client  set ufAROTB = AFIDI.OpenToBuy from AFI_DebtorIntegration.dbo.DI_ArchDebtors as AFIDI  where Account = AFIDI.AccountNumber COLLATE SQL_Latin1_General_CP1_CI_AS"
+    },
+    "app": "SQLCMD .  ",
+    "success": "true"
+  },
+  "location": "WinEvtLog"
+}
+

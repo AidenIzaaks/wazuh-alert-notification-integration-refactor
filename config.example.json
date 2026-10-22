@@ -1,0 +1,32 @@
+{
+  "wazuh_server_url": "https://wazuh.example.org/",
+  "ignore": {
+    "apps": [
+      "Arch Retail System",
+      "SQLAgent"
+    ],
+    "users": [
+      "NT SERVICE",
+      "NT AUTHORITY"
+    ]
+  },
+  "alerts": {
+    "email": {
+      "sender": "sender@example.org",
+      "server": "smtp.example.org",
+      "port": 587,
+      "password": "REPLACE_ME",
+      "recipients": "recipient@example.org",
+      "min_level": 0
+    },
+    "teams": {
+      "webhook_url": "",
+      "min_level": 0
+    },
+    "telegram": {
+      "bot_token": "",
+      "chat_id": "",
+      "min_level": 7
+    }
+  }
+}
